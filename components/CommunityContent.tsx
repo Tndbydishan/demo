@@ -108,6 +108,7 @@ export const CommunityContent: React.FC = () => {
   // State for Dynamic Feed
   const [activeCategory, setActiveCategory] = useState('All');
   const [visibleCount, setVisibleCount] = useState(3);
+  const [searchTerm, setSearchTerm] = useState('');
 
   // State for Dynamic Operating Hours
   const [shopStatus, setShopStatus] = useState({ 
@@ -121,11 +122,23 @@ export const CommunityContent: React.FC = () => {
   // Filter Logic
   const filteredUpdates = useMemo(() => {
     let items = UPDATES;
+    
+    // 1. Category Filter
     if (activeCategory !== 'All') {
-      items = UPDATES.filter(item => item.category === activeCategory);
+      items = items.filter(item => item.category === activeCategory);
     }
+
+    // 2. Search Filter
+    if (searchTerm.trim()) {
+      const lowerTerm = searchTerm.toLowerCase();
+      items = items.filter(item => 
+        item.title.toLowerCase().includes(lowerTerm) || 
+        item.desc.toLowerCase().includes(lowerTerm)
+      );
+    }
+
     return items;
-  }, [activeCategory]);
+  }, [activeCategory, searchTerm]);
 
   const displayedUpdates = filteredUpdates.slice(0, visibleCount);
   const hasMore = visibleCount < filteredUpdates.length;
@@ -374,19 +387,37 @@ export const CommunityContent: React.FC = () => {
         {/* 4. Dynamic Updates Feed */}
         <div className={`${styles['comm-updates-section']} comm-updates-section`}>
           <div className={styles['comm-feed-header']}>
-             <h2 className={styles['comm-section-title']}>Workshop Feed</h2>
+             <div className={styles['comm-feed-title-col']}>
+                <h2 className={styles['comm-section-title']}>Workshop Feed</h2>
+             </div>
              
-             {/* Category Filters */}
-             <div className={styles['comm-feed-filters']}>
-               {FILTER_TABS.map((tab) => (
-                 <button 
-                   key={tab} 
-                   onClick={() => handleFilterChange(tab)}
-                   className={`${styles['comm-filter-btn']} ${activeCategory === tab ? styles['active'] : ''}`}
-                 >
-                   {tab}
-                 </button>
-               ))}
+             {/* Controls: Search + Filters */}
+             <div className={styles['comm-feed-controls']}>
+                
+                {/* Search Bar */}
+                <div className={styles['comm-search-wrapper']}>
+                  <i className={`ri-search-line ${styles['comm-search-icon']}`}></i>
+                  <input 
+                    type="text" 
+                    placeholder="Search updates..." 
+                    className={styles['comm-search-input']}
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                </div>
+
+                {/* Filters */}
+                <div className={styles['comm-feed-filters']}>
+                  {FILTER_TABS.map((tab) => (
+                    <button 
+                      key={tab} 
+                      onClick={() => handleFilterChange(tab)}
+                      className={`${styles['comm-filter-btn']} ${activeCategory === tab ? styles['active'] : ''}`}
+                    >
+                      {tab}
+                    </button>
+                  ))}
+                </div>
              </div>
           </div>
           
@@ -406,7 +437,7 @@ export const CommunityContent: React.FC = () => {
               ))
             ) : (
               <p style={{color:'#6b7280', textAlign:'center', padding:'2rem'}}>
-                No updates found for this category.
+                No updates found matching your criteria.
               </p>
             )}
           </div>
