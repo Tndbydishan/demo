@@ -56,6 +56,9 @@ export const PartnerMarquee: React.FC<PartnerMarqueeProps> = ({
             className="pm-partner-logo"
             // Important: prevent dragging to not interfere with scroll events
             draggable={false}
+            // CRITICAL FIX: Animated marquees break lazy loading detection.
+            // We must force eager loading to ensure the browser requests the image immediately.
+            loading="eager"
             style={{ 
               width: p.customWidth ? p.customWidth : 'auto',
               maxHeight: '100%' 
