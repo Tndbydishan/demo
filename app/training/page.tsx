@@ -11,7 +11,7 @@ export const metadata = {
 const ACADEMIC_PARTNERS = [
   { 
     name: 'Bosch', 
-    logo: '/public/resources/trainning partners/bosch.svg', 
+    logo: '/resources/trainning partners/bosch.svg', 
     customWidth: '130px' 
   },
   { 
@@ -21,7 +21,7 @@ const ACADEMIC_PARTNERS = [
   },
   { 
     name: 'Institute of Motor Industry', 
-    logo: '/public/resources/trainning partners/imi-logo-min-original.png', 
+    logo: '/resources/trainning partners/imi-logo-min-original.png', 
     customWidth: '170px' 
   },
   { 
