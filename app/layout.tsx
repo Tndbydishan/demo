@@ -2,7 +2,7 @@
 import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Montserrat } from 'next/font/google';
-import './globals.css';
+import '../app/globals.css';
 import { ClientLayout } from '../components/ClientLayout';
 
 // Configure Montserrat (Secondary Font)

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import { PageHero } from '../../components/PageHero';
 import { SocialFeed } from '../../components/SocialFeed';
 import { EventSection } from '../../components/EventSection';
@@ -18,7 +18,12 @@ export default function BlogsPage() {
         mediaType="image"
         mediaSource="https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
-      <EventSection />
+      
+      {/* Suspense is required for static export because EventSection uses useSearchParams */}
+      <Suspense fallback={<div style={{ minHeight: '600px' }} aria-busy="true" />}>
+        <EventSection />
+      </Suspense>
+      
       <SocialFeed />
     </>
   );
