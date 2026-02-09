@@ -1,0 +1,87 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  background-color: #F7F7F5;
+  color: #121212;
+}
+
+/* Page Fade In Effect */
+.fadeInPage {
+  animation: pageFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.main {
+  flex-grow: 1;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+/* =========================================
+   FIXED LAYOUT ELEMENTS
+   (Matching Reference Layout.tsx)
+========================================= */
+
+/* Fixed Logo: Top Left */
+.fixedLogo {
+  position: fixed;
+  top: 2rem; /* top-8 */
+  left: 1.5rem; /* left-6 */
+  z-index: 110;
+  pointer-events: auto;
+  color: #121212;
+}
+
+@media (min-width: 1024px) {
+  .fixedLogo {
+    left: 3rem; /* lg:left-12 */
+  }
+}
+
+/* Fixed Inquire Button: Top Right */
+.fixedButtonWrapper {
+  position: fixed;
+  top: 2rem; /* top-8 */
+  right: 3rem; /* right-12 */
+  z-index: 110;
+  pointer-events: auto;
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .fixedButtonWrapper {
+    display: block;
+  }
+}
+
+.fixedButton {
+  background-color: #D12027;
+  color: white;
+  padding: 0.75rem 2rem; /* px-8 py-3 */
+  border-radius: 9999px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px; /* text-[10px] */
+  letter-spacing: 0.15em;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #D12027;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: var(--nav-font-primary);
+  text-decoration: none;
+}
+
+.fixedButton:hover {
+  background-color: white;
+  color: #D12027;
+}

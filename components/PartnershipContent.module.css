@@ -1,0 +1,448 @@
+
+/* 
+ * Partnership Content Styles
+ * Theme: Strategic, B2B, Collaborative
+ */
+
+.pt-section {
+  width: 100%;
+  background-color: #ffffff;
+  color: #121212;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.pt-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+@media (min-width: 768px) {
+  .pt-container {
+    gap: 10rem;
+  }
+}
+
+/* --- 1. Philosophy / Intro --- */
+.pt-intro-block {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pt-label {
+  display: block;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #D12027;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.pt-headline {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #121212;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .pt-headline { font-size: 3rem; }
+}
+
+.pt-text {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* --- 2. Interactive Partner Selector --- */
+.pt-selector-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.pt-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 2rem;
+}
+
+.pt-tab-btn {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pt-tab-btn:hover {
+  border-color: #D12027;
+  color: #D12027;
+}
+
+.pt-tab-btn.active {
+  background-color: #D12027;
+  border-color: #D12027;
+  color: #ffffff;
+  box-shadow: 0 10px 20px -5px rgba(209, 32, 39, 0.3);
+}
+
+.pt-display-card {
+  background-color: #f7f7f5;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,0.05);
+  animation: fadeIn 0.5s ease-out;
+}
+
+@media (min-width: 1024px) {
+  .pt-display-card {
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem;
+    gap: 5rem;
+  }
+}
+
+.pt-display-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.5rem;
+  color: #121212;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.pt-display-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 2rem;
+}
+
+.pt-check-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.pt-check-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.pt-check-item i {
+  color: #D12027;
+  font-size: 1.2rem;
+}
+
+.pt-display-visual {
+  background-color: #ffffff;
+  height: 300px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.pt-visual-icon {
+  font-size: 5rem;
+  color: #e5e7eb;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 3. Partnership Models (Grid) --- */
+.pt-models-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .pt-models-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pt-model-card {
+  border: 1px solid #e5e7eb;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.pt-model-card:hover {
+  border-color: #D12027;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,0.08);
+}
+
+.pt-model-icon {
+  font-size: 2rem;
+  color: #121212;
+  margin-bottom: 1.5rem;
+}
+
+.pt-model-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #121212;
+}
+
+.pt-model-list {
+  margin-top: 1.5rem;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1.5rem;
+}
+
+.pt-model-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.pt-model-list li::before {
+  content: "•";
+  color: #D12027;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.pt-model-outcome {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #D12027;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --- 4. Process (Timeline) --- */
+.pt-process-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pt-process-step {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+/* Vertical Line */
+.pt-process-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 24px; /* Half of circle width (48px) */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e5e7eb;
+  z-index: 0;
+}
+
+.pt-step-number {
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+  border: 2px solid #D12027;
+  color: #D12027;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.pt-step-content {
+  padding-top: 0.5rem;
+}
+
+.pt-step-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #121212;
+}
+
+.pt-step-desc {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* --- 5. Tech Innovation (Dark Mode) --- */
+.pt-tech-section {
+  background-color: #121212;
+  color: #ffffff;
+  border-radius: 1rem;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .pt-tech-section {
+    padding: 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+}
+
+.pt-tech-badge {
+  background-color: rgba(255,255,255,0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.7rem;
+  color: #D12027;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.pt-tech-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.pt-tech-text {
+  color: #d1d5db;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.pt-tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.pt-tech-card {
+  background-color: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.pt-tech-card h4 {
+  color: #ffffff;
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pt-tech-card h4 i {
+  color: #D12027;
+}
+
+.pt-tech-card p {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* --- 6. Governance --- */
+.pt-gov-block {
+  text-align: center;
+  background-color: #f7f7f5;
+  padding: 4rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.pt-gov-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #121212;
+}
+
+.pt-gov-text {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+/* --- CTA --- */
+.pt-cta-block {
+  text-align: center;
+}
+
+.pt-cta-btn {
+  display: inline-block;
+  background-color: #D12027;
+  color: #ffffff;
+  padding: 1rem 3rem;
+  border-radius: 4px;
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px -5px rgba(209, 32, 39, 0.4);
+}
+
+.pt-cta-btn:hover {
+  background-color: #b91c23;
+  transform: translateY(-3px);
+}
+
+.pt-cta-sub {
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-style: italic;
+}

@@ -1,0 +1,142 @@
+
+/* 
+ * Partner Marquee Styles
+ * Double-Track Method
+ */
+
+.pm-section {
+  width: 100%;
+  background-color: #f7f7f5;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  overflow: hidden;
+  /* Padding is now handled via inline style prop */
+}
+
+.pm-header {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pm-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.25rem;
+  color: #121212;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.pm-line {
+  width: 60px;
+  height: 4px;
+  background-color: #00257d; 
+  border-radius: 2px;
+}
+
+/* --- Marquee Track --- */
+.pm-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  display: block; 
+  
+  /* Fade edges */
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.pm-track {
+  display: flex;
+  align-items: center;
+  /* Gap is now handled via inline style prop */
+  width: max-content; 
+  padding: 1rem 0;
+  will-change: transform;
+}
+
+/* --- Partner Item --- */
+.pm-partner-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; 
+  cursor: pointer;
+  /* Height is now handled via inline style prop */
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+/* --- Image Logo Styles --- */
+.pm-partner-logo {
+  height: auto;
+  /* Max Height ensures logo fits within the container height provided by prop */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  
+  filter: grayscale(100%) opacity(0.6);
+  -webkit-filter: grayscale(100%) opacity(0.6);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.pm-partner-item:hover .pm-partner-logo {
+  filter: grayscale(0%) opacity(1);
+  -webkit-filter: grayscale(0%) opacity(1);
+  transform: scale(1.01);
+}
+
+/* --- Text/Icon Fallback Styles --- */
+.pm-partner-text {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.pm-partner-item:hover .pm-partner-text {
+  color: #00257d; 
+  transform: scale(1.05);
+}
+
+.pm-partner-icon {
+  font-size: 1.75rem;
+  margin-right: 0.75rem;
+  color: #d1d5db;
+  transition: color 0.3s ease;
+}
+
+.pm-partner-item:hover .pm-partner-icon {
+  color: #00257d;
+}
+
+/* --- Responsive --- */
+@media (min-width: 768px) {
+  .pm-title {
+    font-size: 1.75rem;
+  }
+  
+  .pm-partner-text {
+    font-size: 2rem;
+  }
+  .pm-partner-icon {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .pm-partner-text {
+    font-size: 2.5rem;
+  }
+}

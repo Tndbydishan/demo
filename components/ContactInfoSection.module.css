@@ -1,0 +1,229 @@
+
+/* 
+ * Contact Info Section Styles
+ */
+
+.cis-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0; /* Reduced mobile padding */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .cis-container {
+    padding: 4rem 0;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cis-container {
+    padding: 6rem 0;
+    gap: 4rem;
+  }
+}
+
+/* --- Infinite Marquee Section --- */
+.cis-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.cis-marquee-track {
+  display: flex;
+  white-space: nowrap;
+  width: fit-content;
+  /* Animation duration 60s */
+  animation: cisScroll 60s linear infinite;
+  will-change: transform;
+}
+
+.cis-marquee-item {
+  letter-spacing: 2px;
+  font-family: var(--font-akira), sans-serif;
+  font-size: 1.75rem; /* Reduced for mobile 320px compatibility */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #121212;
+  margin-right: 1.5rem;
+  line-height: 1;
+  opacity: 0.9;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Target internal spans for TRUST and STAR */
+.cis-marquee-item span {
+  letter-spacing: 4px;
+  color: #D12027;
+  -webkit-text-stroke: 0;
+}
+
+.cis-marquee-wrapper:hover .cis-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes cisScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+}
+
+/* --- Content Section --- */
+.cis-content-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 0.5rem; /* Minimal side padding on mobile within container */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 1440px) {
+  .cis-content-wrapper {
+    max-width: 1200px; /* Cap width on large screens */
+  }
+}
+
+.cis-description {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.95rem; /* Smaller for mobile */
+  font-weight: 500;
+  line-height: 1.6;
+  color: #4b5563;
+  max-width: 100%;
+}
+
+.cis-description strong {
+  color: #121212;
+  font-weight: 700;
+}
+
+/* --- Contact Details Grid --- */
+.cis-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.cis-detail-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem; /* Compact padding for mobile */
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden; /* Prevent spill on very small screens */
+}
+
+.cis-detail-card:hover {
+  border-color: #D12027;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.cis-icon-box {
+  width: 2.5rem; /* Smaller icon box for mobile */
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D12027;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cis-detail-card:hover .cis-icon-box {
+  background-color: #D12027;
+  color: #ffffff;
+}
+
+.cis-detail-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Flexbox text overflow fix */
+}
+
+.cis-detail-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: #9ca3af;
+  margin-bottom: 0.15rem;
+}
+
+.cis-detail-value {
+  font-size: 0.9rem; /* Smaller to fit email on 320px */
+  font-weight: 600;
+  color: #121212;
+  word-break: break-all;
+}
+
+/* --- Responsive Media Queries --- */
+
+@media (min-width: 768px) {
+  /* Tablet+ */
+  .cis-marquee-item {
+    font-size: 4rem; 
+    margin-right: 4rem;
+    letter-spacing: 5px;
+  }
+  
+  .cis-content-wrapper {
+    padding: 0 1.5rem;
+    gap: 3rem;
+  }
+
+  .cis-description {
+    font-size: 1.125rem;
+    max-width: 48rem;
+  }
+
+  .cis-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .cis-detail-card {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .cis-icon-box {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .cis-detail-label {
+    font-size: 0.75rem;
+  }
+  
+  .cis-detail-value {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* Desktop+ */
+  .cis-marquee-item {
+    font-size: 6rem;
+  }
+}

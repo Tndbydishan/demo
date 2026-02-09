@@ -1,29 +1,32 @@
-import type { Metadata } from 'next';
+import React from 'react';
+import { PageHero } from '../../components/PageHero';
+import { PartnerMarquee } from '../../components/PartnerMarquee';
+import { ContactInfoSection } from '../../components/ContactInfoSection';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'About Us',
-  description: 'Learn about AutoEvolution\'s mission to build the fastest, most indexable webs on the planet.',
+  description: 'Learn about our legacy, mission, and the team behind Auto Evolution.',
 };
+
+const PARTNERS = [
+  { name: 'Certified', icon: 'ri-medal-fill' },
+  { name: 'Quality', icon: 'ri-shield-check-fill' },
+  { name: 'Expert', icon: 'ri-user-star-fill' },
+];
 
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto space-y-8">
-      <div className="space-y-4">
-        <h1 className="text-4xl font-bold text-slate-900">About AutoEvolution</h1>
-        <p className="text-lg text-slate-700 leading-relaxed">
-          We are dedicated to implementing the bleeding edge of web technology. By leveraging Next.js 
-          App Router, we ensure that every byte served is optimized for both user experience and search engine crawlers.
-        </p>
+    <>
+      <PageHero 
+        title="ABOUT US"
+        subtitle="OUR LEGACY & MISSION"
+        mediaType="image"
+        mediaSource="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2944&auto=format&fit=crop"
+      />
+      <div className="max-w-[1440px] mx-auto">
+        <ContactInfoSection />
       </div>
-      
-      <section className="bg-white p-8 rounded-xl shadow-sm border border-slate-200">
-        <h2 className="text-2xl font-semibold mb-4 text-slate-900">Why Architecture Matters</h2>
-        <p className="text-slate-600 mb-4">
-          In the modern web, speed is currency. Our architecture minimizes Client-Side JavaScript execution 
-          by utilizing React Server Components (RSC). This reduces the main-thread work, leading to faster 
-          Time to Interactive (TTI) and First Contentful Paint (FCP) metrics—core Web Vitals that Google prioritizes.
-        </p>
-      </section>
-    </div>
+      <PartnerMarquee partners={PARTNERS} />
+    </>
   );
 }

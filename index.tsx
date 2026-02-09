@@ -1,3 +1,3 @@
-// This file is no longer used in the Next.js App Router architecture.
-// Please use 'npm run dev' to start the Next.js development server.
-// The entry point is now app/layout.tsx.
+// This file is no longer used in Next.js App Router structure.
+// You can safely delete this file if your environment allows.
+export {};

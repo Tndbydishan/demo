@@ -1,0 +1,223 @@
+
+/* 
+ * Sitemap Content Styles
+ * Theme: Technical Index / Book Directory
+ */
+
+.sm-section {
+  width: 100%;
+  background-color: #f7f7f5;
+  color: #121212;
+  position: relative;
+  min-height: 80vh;
+}
+
+.sm-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* --- Search Header --- */
+.sm-search-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  border-bottom: 2px solid #121212;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .sm-search-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.sm-title-block h2 {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+  color: #121212;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.sm-title-block p {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.9rem;
+  color: #4b5563;
+  max-width: 400px;
+}
+
+.sm-search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.sm-search-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 999px;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  color: #121212;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.sm-search-input:focus {
+  outline: none;
+  border-color: #D12027;
+  box-shadow: 0 10px 15px -3px rgba(209, 32, 39, 0.1);
+}
+
+.sm-search-icon {
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 1.2rem;
+  pointer-events: none;
+}
+
+/* --- Index Layout --- */
+.sm-index-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.sm-category-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .sm-category-section {
+    grid-template-columns: 250px 1fr;
+    gap: 4rem;
+  }
+}
+
+/* Category Label (Left Side) */
+.sm-cat-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.sm-cat-number {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 3rem;
+  color: rgba(0,0,0,0.05);
+  line-height: 0.8;
+}
+
+.sm-cat-name {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.1rem;
+  color: #D12027;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .sm-cat-label {
+    position: sticky;
+    top: 8rem;
+    height: fit-content;
+  }
+}
+
+/* Links Grid (Right Side) */
+.sm-links-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .sm-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .sm-links-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Link Card */
+.sm-link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-left: 2px solid rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sm-link-card:hover {
+  border-left-color: #D12027;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transform: translateX(5px);
+}
+
+.sm-link-title {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #121212;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sm-arrow {
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+  color: #D12027;
+  font-size: 1.1rem;
+}
+
+.sm-link-card:hover .sm-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sm-link-desc {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* No Results */
+.sm-no-results {
+  text-align: center;
+  padding: 4rem;
+  color: #9ca3af;
+  font-size: 1.2rem;
+  font-family: var(--font-montserrat), sans-serif;
+}

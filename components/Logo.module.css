@@ -1,0 +1,63 @@
+
+/* 
+ * Nav Logo Styles
+ * Encapsulated styling for the vector brand mark.
+ */
+
+/* Container Link */
+.nav-logo-link {
+  display: block;
+  transition: opacity 0.3s ease;
+  text-decoration: none;
+  /* Default color is inherited, but can be overridden inline or via parent */
+  color: inherit;
+}
+
+.nav-logo-link:hover {
+  opacity: 1; /* Ensure no opacity drop on hover as requested previously */
+}
+
+/* Main SVG */
+.nav-logo-svg {
+  height: 2.2rem; /* Mobile: h-6 (24px) */
+  width: auto;
+  transition: fill 0.3s ease;
+}
+
+/* Tablet Breakpoint */
+@media (min-width: 768px) {
+  .nav-logo-svg {
+    height: 2.8rem; /* Increased for tablet */
+  }
+}
+
+/* Desktop Breakpoint */
+@media (min-width: 1024px) {
+  .nav-logo-svg {
+    height: 3.5rem; /* Significantly larger for Desktop (approx 56px) */
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px){
+  .nav-logo-svg {
+    height: 2rem; 
+  }
+}
+
+
+/* Text Groups (Auto, Evolution, Workshop) */
+.nav-logo-text-group {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 22.58px;
+  font-weight: 700;
+  fill: currentColor; /* Adapts to theme */
+}
+
+/* Branding Colors */
+.nav-logo-red {
+  fill: #d02029; /* Official Brand Red */
+}
+
+.nav-logo-dynamic {
+  fill: currentColor; /* Adapts to theme (Black/White) */
+}

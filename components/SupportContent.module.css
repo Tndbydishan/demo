@@ -1,0 +1,336 @@
+
+/* 
+ * Support Content Styles
+ * Theme: Reassuring, Organized, Accessible
+ */
+
+.sup-section {
+  width: 100%;
+  background-color: #ffffff;
+  color: #121212;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.sup-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+@media (min-width: 768px) {
+  .sup-container {
+    gap: 10rem;
+  }
+}
+
+/* --- 1. Intro / Philosophy --- */
+.sup-intro-block {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sup-label {
+  display: block;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #D12027;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.sup-headline {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #121212;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .sup-headline {
+    font-size: 3rem;
+  }
+}
+
+.sup-text {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* --- 2. Support Path Selector (Grid) --- */
+.sup-path-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .sup-path-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sup-path-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.sup-card {
+  background-color: #f7f7f5;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.sup-card:hover {
+  background-color: #ffffff;
+  border-color: #D12027;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08);
+}
+
+.sup-card-icon {
+  font-size: 2rem;
+  color: #D12027;
+  margin-bottom: 1.5rem;
+  background-color: rgba(209, 32, 39, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.sup-card:hover .sup-card-icon {
+  background-color: #D12027;
+  color: #ffffff;
+}
+
+.sup-card-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1rem;
+  color: #121212;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.sup-card-desc {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.sup-card-arrow {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+  color: #D12027;
+  font-size: 1.2rem;
+}
+
+.sup-card:hover .sup-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- 3. Channels & Standards --- */
+.sup-split-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding-top: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .sup-split-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+}
+
+.sup-section-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #121212;
+}
+
+/* Channels List */
+.sup-channel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sup-channel-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.sup-channel-icon {
+  font-size: 1.5rem;
+  color: #121212;
+}
+
+.sup-channel-info h4 {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #121212;
+  margin-bottom: 0.25rem;
+}
+
+.sup-channel-info p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+.sup-channel-link {
+  font-size: 0.9rem;
+  color: #D12027;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sup-channel-link:hover {
+  text-decoration: underline;
+}
+
+/* Standards List */
+.sup-standards-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sup-std-item {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.sup-std-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 8px;
+  height: 8px;
+  background-color: #D12027;
+  border-radius: 50%;
+}
+
+.sup-std-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.9rem;
+  color: #121212;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.sup-std-desc {
+  font-size: 0.95rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* --- 4. Human Touch (Bottom) --- */
+.sup-human-block {
+  background-color: #121212;
+  color: #ffffff;
+  border-radius: 1rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .sup-human-block {
+    padding: 6rem;
+  }
+}
+
+.sup-human-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.sup-human-quote {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: #e5e7eb;
+  margin-bottom: 2rem;
+}
+
+.sup-human-cta {
+  display: inline-block;
+  background-color: #D12027;
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 999px;
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sup-human-cta:hover {
+  background-color: #ffffff;
+  color: #D12027;
+  transform: translateY(-3px);
+}
+
+.sup-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  background-image: radial-gradient(#ffffff 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+}

@@ -1,0 +1,188 @@
+
+/* 
+ * Privacy Content Styles
+ * Theme: Documentation / Legal / Clean
+ */
+
+.pc-section {
+  width: 100%;
+  background-color: #ffffff;
+  color: #374151;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.pc-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .pc-container {
+    grid-template-columns: 300px 1fr;
+    gap: 5rem;
+  }
+}
+
+/* --- Left Column: Sticky Nav --- */
+.pc-nav-wrapper {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .pc-nav-wrapper {
+    display: block;
+    position: sticky;
+    top: 8rem;
+    height: fit-content;
+    padding-right: 2rem;
+    border-right: 1px solid rgba(0,0,0,0.05);
+  }
+}
+
+.pc-nav-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.8rem;
+  color: #121212;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pc-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pc-nav-link {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  display: block;
+  padding-left: 1rem;
+  border-left: 2px solid transparent;
+}
+
+.pc-nav-link:hover {
+  color: #D12027;
+  border-left-color: #D12027;
+  padding-left: 1.25rem;
+}
+
+/* --- Right Column: Content --- */
+.pc-content {
+  width: 100%;
+  max-width: 850px;
+}
+
+.pc-last-updated {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-bottom: 2rem;
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pc-block {
+  margin-bottom: 3.5rem;
+  scroll-margin-top: 8rem; /* Offset for sticky header */
+}
+
+.pc-heading {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.25rem;
+  color: #121212;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+@media (min-width: 768px) {
+  .pc-heading {
+    font-size: 1.5rem;
+  }
+}
+
+.pc-text {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.pc-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+  padding-left: 0.5rem;
+}
+
+.pc-list-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.pc-list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 6px;
+  height: 6px;
+  background-color: #D12027;
+  border-radius: 50%;
+}
+
+.pc-subheading {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #121212;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Callout Box */
+.pc-trust-box {
+  background-color: #f7f7f5;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #D12027;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-top: 4rem;
+}
+
+.pc-trust-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.1rem;
+  color: #121212;
+  margin-bottom: 1rem;
+}
+
+.pc-trust-text {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  font-style: italic;
+}

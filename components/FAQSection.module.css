@@ -1,0 +1,346 @@
+
+/* 
+ * FAQ Section Styles
+ * Theme: Glassmorphism & Advanced Interaction
+ */
+
+.section {
+  width: 100%;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconWrapper {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #D12027;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 20px -5px rgba(209, 32, 39, 0.4);
+}
+
+.title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.75rem;
+  color: #121212;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.title span {
+  color: #D12027;
+}
+
+@media (min-width: 768px) {
+  .title { font-size: 2.5rem; }
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background-color: #D12027;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 500;
+  max-width: 600px;
+}
+
+/* --- Controls: Search & Tabs --- */
+.controlsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+/* Search Bar */
+.searchContainer {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  font-size: 1.25rem;
+  pointer-events: none;
+  transition: color 0.3s;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #121212;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #D12027;
+  background: #ffffff;
+  box-shadow: 0 10px 20px -5px rgba(209, 32, 39, 0.15);
+}
+
+.searchInput:focus + .searchIcon {
+  color: #D12027;
+}
+
+/* Category Tabs */
+.categoryTabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.tabBtn {
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4b5563;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.tabBtn:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: #D12027;
+  transform: translateY(-2px);
+}
+
+.tabBtn.activeTab {
+  background: #D12027;
+  color: #ffffff;
+  border-color: #D12027;
+  box-shadow: 0 4px 12px rgba(209, 32, 39, 0.3);
+}
+
+/* --- Accordion List --- */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 400px; /* Prevent huge layout shift when filtering */
+}
+
+/* Accordion Item */
+.item {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.item:hover {
+  border-color: rgba(209, 32, 39, 0.1);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.item.activeItem {
+  background: #ffffff;
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
+  border-color: rgba(209, 32, 39, 0.2);
+  transform: scale(1.01);
+  z-index: 2; /* Bring active item slightly forward */
+}
+
+/* Question Button */
+.questionButton {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.questionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.categoryTag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #D12027;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+}
+
+.questionText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #121212;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .questionText { font-size: 1.15rem; }
+  
+  .questionButton { padding: 1.75rem 2rem; }
+  
+  /* Make category tag side-by-side on large screens if desired, keeping stacked for clarity */
+}
+
+/* Icon */
+.iconContainer {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #121212;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.item.activeItem .iconContainer {
+  background: #D12027;
+  color: #ffffff;
+}
+
+.iconOpen {
+  transform: rotate(45deg); /* Turn + into x */
+}
+
+/* Answer Animation */
+.answerWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.answerWrapper.open {
+  grid-template-rows: 1fr;
+}
+
+.answerInner {
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding: 0 1.5rem 0 1.5rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+}
+
+.answerWrapper.open .answerInner {
+  padding-bottom: 2rem;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .answerInner { 
+    font-size: 1rem; 
+    padding: 0 2rem 0 2rem;
+  }
+  .answerWrapper.open .answerInner {
+    padding-bottom: 2.25rem;
+  }
+}
+
+/* --- No Results --- */
+.noResults {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  text-align: center;
+  color: #9ca3af;
+  gap: 1rem;
+  animation: fadeIn 0.4s ease;
+}
+
+.noResults i {
+  font-size: 3rem;
+  color: #e5e7eb;
+}
+
+.noResults p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.noResults button {
+  padding: 0.6rem 1.5rem;
+  background: transparent;
+  border: 1px solid #D12027;
+  color: #D12027;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.noResults button:hover {
+  background: #D12027;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

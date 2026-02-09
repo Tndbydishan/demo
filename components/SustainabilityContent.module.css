@@ -1,0 +1,570 @@
+
+/* 
+ * Sustainability Content Styles
+ * Theme: Clinical, Responsible, Engineered
+ * Updated for "Control Framework" & Case Studies
+ */
+
+.sus-section {
+  width: 100%;
+  background-color: #ffffff;
+  color: #121212;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.sus-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+@media (min-width: 768px) {
+  .sus-container {
+    padding: 6rem 0;
+    gap: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sus-container {
+    gap: 10rem;
+  }
+}
+
+/* --- 1. Philosophy Section --- */
+.sus-philosophy {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .sus-philosophy {
+    gap: 3rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sus-philosophy {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 6rem;
+  }
+}
+
+.sus-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #D12027;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.sus-label::after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background-color: #D12027;
+}
+
+.sus-headline {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.75rem; /* Mobile Size */
+  line-height: 1.1;
+  color: #121212;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .sus-headline {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sus-headline {
+    font-size: 3rem;
+  }
+}
+
+.sus-lead-text {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #121212;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .sus-lead-text {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+}
+
+.sus-text {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .sus-text {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+}
+
+/* --- 2. Real-World Case Studies --- */
+.sus-cases-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .sus-cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sus-cases-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.sus-case-card {
+  background-color: #f7f7f5;
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .sus-case-card {
+    padding: 2.5rem;
+  }
+}
+
+.sus-case-card:hover {
+  background-color: #ffffff;
+  border-color: #D12027;
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+
+.sus-case-number {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 2.5rem;
+  color: rgba(0,0,0,0.05);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  line-height: 1;
+}
+
+.sus-case-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1rem;
+  color: #121212;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  padding-right: 2rem;
+}
+
+@media (min-width: 768px) {
+  .sus-case-title {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.sus-case-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  flex-grow: 1;
+}
+
+.sus-flow-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.sus-flow-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: #9ca3af;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+}
+
+.sus-flow-val {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.sus-flow-val.outcome {
+  color: #D12027;
+  font-weight: 700;
+}
+
+/* --- 3. Sustainability In Practice (Operational) --- */
+.sus-practice-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sus-practice-header {
+  max-width: 800px;
+}
+
+.sus-practice-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .sus-practice-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sus-practice-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+}
+
+.sus-prac-item h4 {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  color: #121212;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .sus-prac-item h4 {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.sus-prac-item p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* --- 4. BOOK SHOWCASE (The Framework) --- */
+.sus-book-showcase {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .sus-book-showcase {
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+  }
+}
+
+/* Left: The Book Visual */
+.sus-book-visual {
+  background-color: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem; /* Reduced padding for mobile responsiveness */
+  position: relative;
+  perspective: 1200px;
+  overflow: hidden; /* Prevent 3D transform overflow on mobile */
+}
+
+@media (min-width: 768px) {
+  .sus-book-visual {
+    padding: 4rem;
+  }
+}
+
+/* CSS Book Construction - Responsive */
+.sus-book-3d {
+  width: 100%;
+  max-width: 260px; /* Start smaller for mobile */
+  aspect-ratio: 1 / 1.414; /* A4 Ratio */
+  height: auto; /* Let aspect ratio control height */
+  
+  background: #ffffff;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(-20deg) rotateX(5deg);
+  box-shadow: 
+    20px 20px 50px rgba(0,0,0,0.5), 
+    inset 0 0 0 1px rgba(0,0,0,0.05);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 2px 4px 4px 2px;
+}
+
+@media (min-width: 768px) {
+  .sus-book-3d {
+    max-width: 320px; /* Larger for Tablet/Desktop */
+  }
+}
+
+/* Hover Effect: Lifts up and faces more forward */
+.sus-book-visual:hover .sus-book-3d {
+  transform: rotateY(-5deg) rotateX(0deg) translateY(-10px) scale(1.02);
+  box-shadow: 30px 30px 60px rgba(0,0,0,0.4);
+}
+
+.sus-book-cover {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  overflow: hidden;
+  border-radius: 2px 4px 4px 2px;
+  display: block;
+}
+
+/* Spine Overlay - Cleaner than border-left */
+.sus-book-cover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 10px; /* Slightly thinner spine for mobile scale */
+  background: linear-gradient(to right, #a0181e, #D12027 40%, #b91c23);
+  z-index: 10;
+  box-shadow: 2px 0 4px rgba(0,0,0,0.2);
+}
+
+@media (min-width: 768px) {
+  .sus-book-cover::before {
+    width: 14px;
+  }
+}
+
+/* Sheen effect on cover */
+.sus-book-cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.05) 100%);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.sus-book-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Right: Content */
+.sus-book-content {
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .sus-book-content {
+    padding: 4rem 3rem;
+  }
+}
+
+.sus-book-label {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.75rem;
+  color: #D12027;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.sus-book-heading {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .sus-book-heading {
+    font-size: 2rem;
+  }
+}
+
+.sus-book-abstract {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.95rem;
+  color: #d1d5db;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.sus-book-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.sus-book-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #a3a3a3;
+  font-size: 0.9rem;
+}
+
+.sus-book-item i {
+  color: #D12027;
+}
+
+.sus-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Center text on mobile */
+  gap: 0.75rem;
+  background-color: #D12027;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 4px;
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100%; /* Full width on mobile */
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 480px) {
+  .sus-download-btn {
+    width: fit-content;
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+  }
+}
+
+.sus-download-btn:hover {
+  background-color: #b91c23;
+  transform: translateX(5px);
+}
+
+.sus-download-meta {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  color: #525252;
+  text-align: center;
+}
+
+@media (min-width: 480px) {
+  .sus-download-meta {
+    text-align: left;
+  }
+}
+
+/* --- 5. Transparency Statement --- */
+.sus-transparency {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 3rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .sus-transparency {
+    padding-top: 4rem;
+  }
+}
+
+.sus-transparency-box {
+  background-color: #f7f7f5;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+@media (min-width: 768px) {
+  .sus-transparency-box {
+    padding: 3rem;
+  }
+}
+
+.sus-transparency-head {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #121212;
+}
+
+@media (min-width: 768px) {
+  .sus-transparency-head {
+    font-size: 1.25rem;
+  }
+}
+
+.sus-transparency-text {
+  font-family: var(--font-montserrat), sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .sus-transparency-text {
+    font-size: 1.1rem;
+  }
+}

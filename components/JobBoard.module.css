@@ -1,0 +1,373 @@
+
+/* 
+ * Job Board Styles
+ * Theme: Technical, clean, interactive
+ */
+
+.jb-section {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #f7f7f5;
+  position: relative;
+}
+
+.jb-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+.jb-header {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.jb-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 2rem;
+  color: #121212;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.jb-title span {
+  color: #D12027;
+}
+
+.jb-subtitle {
+  font-family: var(--font-montserrat), sans-serif;
+  color: #4b5563;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .jb-title { font-size: 3rem; }
+}
+
+/* --- Job Grid --- */
+.jb-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .jb-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+}
+
+@media (min-width: 1280px) {
+  .jb-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* --- Job Card --- */
+.jb-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.jb-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #D12027;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom;
+}
+
+.jb-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,0.1);
+  border-color: rgba(209, 32, 39, 0.3);
+}
+
+.jb-card:hover::before {
+  transform: scaleY(1);
+}
+
+/* Card Content */
+.jb-card-header {
+  margin-bottom: 1.5rem;
+}
+
+.jb-card-dept {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b7280;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.jb-card-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.25rem;
+  color: #121212;
+  line-height: 1.2;
+}
+
+.jb-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.jb-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.jb-meta-item i {
+  color: #D12027;
+}
+
+.jb-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.jb-view-btn {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.7rem;
+  color: #121212;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.jb-card:hover .jb-view-btn {
+  opacity: 1;
+  color: #D12027;
+  gap: 0.75rem;
+}
+
+/* --- MODAL --- */
+.jb-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.jb-modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.jb-modal-container {
+  width: 95%;
+  max-width: 900px;
+  max-height: 90vh;
+  background: #ffffff;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.jb-modal-backdrop.open .jb-modal-container {
+  transform: translateY(0) scale(1);
+}
+
+/* Close Button */
+.jb-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.jb-modal-close:hover {
+  background: #D12027;
+  color: white;
+  transform: rotate(90deg);
+}
+
+/* Modal Content Layout */
+.jb-modal-content {
+  overflow-y: auto;
+  padding: 2.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: #D12027 #f1f1f1;
+}
+
+.jb-modal-header {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.jb-modal-dept {
+  font-family: var(--font-montserrat), sans-serif;
+  color: #D12027;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.jb-modal-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 2rem;
+  color: #121212;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .jb-modal-title { font-size: 2.5rem; }
+}
+
+/* Modal Grid */
+.jb-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .jb-modal-grid { grid-template-columns: 2fr 1fr; }
+}
+
+.jb-section-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1rem;
+  color: #121212;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.jb-text-block {
+  font-family: var(--font-montserrat), sans-serif;
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.jb-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.jb-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.jb-list li::before {
+  content: "•";
+  color: #D12027;
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1rem;
+  top: 0.15rem;
+}
+
+/* Sidebar Info (Right col on desktop) */
+.jb-sidebar-box {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+}
+
+.jb-info-row {
+  margin-bottom: 1.25rem;
+}
+
+.jb-info-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #9ca3af;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+.jb-info-value {
+  display: block;
+  font-weight: 600;
+  color: #121212;
+  font-size: 1rem;
+}
+
+.jb-apply-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #D12027;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.85rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.jb-apply-btn:hover {
+  background-color: #b91c23;
+}

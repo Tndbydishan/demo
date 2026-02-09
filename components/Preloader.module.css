@@ -1,0 +1,73 @@
+
+/* Theme Variables */
+.preloader-overlay {
+  --preloader-bg: #f7f7f5;
+  --preloader-text: #141414;
+  --preloader-accent: #d02029;
+}
+
+/* Main Overlay */
+.preloader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--preloader-bg);
+  color: var(--preloader-text);
+  overflow: hidden;
+  overscroll-behavior: none;
+  opacity: 0; /* Handled by GSAP */
+  visibility: hidden; /* Handled by GSAP */
+}
+
+/* Content Container */
+.preloader-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+/* Logo Wrapper */
+.preloader-logo-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  max-width: 210px;
+}
+
+@media (min-width: 420px) {
+  .preloader-logo-wrapper {
+    max-width: 260px;
+  }
+}
+
+@media (min-width: 640px) {
+  .preloader-logo-wrapper {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .preloader-logo-wrapper {
+    max-width: 580px; /* Large size for Desktop */
+  }
+}
+
+/* 
+ * Ensure Logo scales nicely inside.
+ * We use !important to override the specific height rules 
+ * defined in the Logo component's CSS module.
+ */
+.preloader-logo-wrapper svg {
+  width: 100% !important;
+  height: auto !important;
+  overflow: visible !important;
+  max-height: none !important;
+}

@@ -1,0 +1,326 @@
+
+/* 
+ * Safety Content Styles
+ * Theme: Industrial, Rigid, Protected
+ */
+
+.safe-section {
+  width: 100%;
+  background-color: #ffffff;
+  color: #121212;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.safe-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+@media (min-width: 768px) {
+  .safe-container {
+    gap: 10rem;
+  }
+}
+
+/* --- 1. Philosophy Section --- */
+.safe-philosophy {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .safe-philosophy {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 6rem;
+  }
+}
+
+.safe-label {
+  display: block;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #D12027;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.safe-label::after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background-color: #D12027;
+}
+
+.safe-headline {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: #121212;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .safe-headline { font-size: 3rem; }
+}
+
+.safe-lead-text {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #121212;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.safe-text {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+/* --- 2. Protocol Grid (Bento Style) --- */
+.safe-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .safe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .safe-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.safe-card {
+  background-color: #f7f7f5;
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.safe-card:hover {
+  background-color: #ffffff;
+  box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08);
+  border-color: #D12027;
+  transform: translateY(-5px);
+}
+
+.safe-card-icon {
+  font-size: 2rem;
+  color: #D12027;
+  margin-bottom: 1.5rem;
+}
+
+.safe-card-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.1rem;
+  color: #121212;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.safe-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.safe-list-item {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.safe-list-item::before {
+  content: "•";
+  color: #D12027;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* --- 3. High Voltage Zone (Dark Section) --- */
+.safe-hv-section {
+  background-color: #121212;
+  color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .safe-hv-section {
+    padding: 6rem 4rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+  }
+}
+
+.safe-hv-bg-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20rem;
+  color: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.safe-hv-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.safe-hv-badge {
+  display: inline-block;
+  background-color: #D12027;
+  color: #ffffff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.safe-hv-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .safe-hv-title { font-size: 2.5rem; }
+}
+
+.safe-hv-text {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+.safe-hv-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .safe-hv-stats {
+    flex-direction: row;
+    margin-top: 0;
+  }
+}
+
+.safe-stat-item {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  min-width: 180px;
+  text-align: center;
+}
+
+.safe-stat-icon {
+  font-size: 1.5rem;
+  color: #D12027;
+  margin-bottom: 0.5rem;
+}
+
+.safe-stat-label {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --- 4. Governance & Transparency --- */
+.safe-gov-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .safe-gov-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+  }
+}
+
+.safe-gov-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.25rem;
+  color: #121212;
+  margin-bottom: 1.5rem;
+}
+
+.safe-gov-text {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.safe-transparency-box {
+  background-color: #f7f7f5;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #D12027;
+}
+
+.safe-transparency-quote {
+  font-family: var(--font-montserrat), sans-serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #121212;
+  line-height: 1.6;
+}

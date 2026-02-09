@@ -1,0 +1,229 @@
+
+/* 
+ * Social Feed Component Styles
+ * Theme: Professional Robust Glassmorphism
+ * Responsive Strategy: Mobile Center -> Desktop Left
+ */
+
+/* Container */
+.sf-wrapper {
+  width: 100%;
+  padding: 4rem 0;
+  position: relative;
+  background-color: transparent;
+}
+
+/* --- Header Styling --- */
+.sf-header {
+  display: flex;
+  flex-direction: column;
+  /* Mobile: Center Aligned */
+  align-items: center; 
+  text-align: center;
+  margin: 0 auto 3rem auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 1rem;
+}
+
+.sf-headline {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.75rem; /* Mobile Size */
+  color: #121212;
+  margin: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.sf-headline span {
+  color: #D12027;
+}
+
+.sf-underline {
+  height: 4px;
+  width: 60px;
+  background-color: #D12027;
+  margin: 1rem 0 1rem 0;
+}
+
+.sf-subtitle {
+  font-family: "Montserrat", sans-serif;
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 500;
+  max-width: 400px; /* Constrain width on mobile for readability */
+}
+
+/* Tablet & Desktop Overrides */
+@media (min-width: 768px) {
+  .sf-header {
+    align-items: flex-start;
+    text-align: left;
+    margin: 0 0 3rem 0; /* Reset margin for left align */
+    max-width: 700px;
+    padding: 0;
+  }
+
+  .sf-headline {
+    font-size: 2.5rem;
+  }
+
+  .sf-underline {
+    margin: 1.5rem 0 1rem 0;
+  }
+
+  .sf-subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+
+/* Large Desktop Specific Indentation */
+@media (min-width: 1024px) {
+  .sf-header {
+    margin-left: 4rem; /* Aesthetic indentation */
+  }
+}
+
+/* --- Facebook Container Styles --- */
+.sf-facebook-container {
+  width: 100%;
+  display: flex;
+  /* Mobile: Center Feed */
+  justify-content: center; 
+  padding: 0 1rem;
+  animation: fadeIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .sf-facebook-container {
+    justify-content: flex-start;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sf-facebook-container {
+    padding-left: 4rem; /* Match header indentation */
+  }
+}
+
+/* Robust Glass Wrapper */
+.sf-facebook-glass-wrapper {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.05), 
+    0 10px 15px -3px rgba(0, 0, 0, 0.05),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  border-radius: 0.75rem; 
+  
+  width: 100%;
+  max-width: 500px;
+  
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.75rem; 
+}
+
+@media (min-width: 480px) {
+  .sf-facebook-glass-wrapper {
+    padding: 1rem;
+  }
+}
+
+.sf-facebook-glass-wrapper:hover {
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
+
+/* --- Card Header --- */
+.sf-card-header {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 480px) {
+  .sf-card-header {
+    padding: 1.25rem 1.5rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.sf-card-icon {
+  width: 2rem;
+  height: 2rem;
+  background-color: #1877F2; 
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgba(24, 119, 242, 0.3);
+}
+
+@media (min-width: 480px) {
+  .sf-card-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+.sf-card-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.85rem;
+  color: #121212;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+@media (min-width: 480px) {
+  .sf-card-title {
+    font-size: 1rem;
+  }
+}
+
+/* Plugin Wrapper */
+.sf-plugin-wrapper {
+  padding: 0;
+  background: transparent;
+  width: 100%;
+  /* Force min-height to prevent jumpiness */
+  min-height: 500px;
+}
+
+/* Override FB iframe responsiveness */
+.fb-page, 
+.fb-page span, 
+.fb-page iframe {
+  width: 100% !important;
+  display: block !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark Mode Support (if parent has class) */
+.bg-dark .sf-headline { color: #ffffff; }
+.bg-dark .sf-subtitle { color: #9ca3af; }

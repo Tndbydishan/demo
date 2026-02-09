@@ -1,0 +1,236 @@
+
+/* 
+ * PageHero Component Styles
+ * Updated for Floating/Gap Layout with Robust Breakpoints
+ */
+
+.page-hero-container {
+  position: relative;
+  
+  /* FLOATING LAYOUT CONFIGURATION */
+  /* Wider Mobile Width: calc(100% - 1rem) gives 0.5rem margin on sides */
+  width: calc(100% - 1rem); 
+  
+  /* LOWERED HERO: Creates space for fixed Navbar & Logo */
+  margin-top: 6rem; 
+  margin-left: auto;
+  margin-right: auto;
+  
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.15);
+  
+  /* --- 1. MOBILE BREAKPOINT (Default < 768px) --- */
+  /* Robust height to ensure content fits comfortably on tall phones */
+  height: 60vh; 
+  min-height: 480px;
+  
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  background-color: #121212;
+  transform: translateZ(0); /* Hardware acceleration for container */
+}
+
+/* --- 2. TABLET BREAKPOINT (>= 768px) --- */
+@media (min-width: 768px) {
+  .page-hero-container {
+    /* Wider Tablet Width: calc(100% - 2rem) gives 1rem margin on sides */
+    width: calc(100% - 2rem);
+    margin-top: 7rem; /* Increased spacing for desktop header */
+    border-radius: 1.25rem;
+    
+    /* Balanced height for portrait tablets */
+    height: 70vh; 
+    min-height: 600px;
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* --- 3. DESKTOP / LAPTOP BREAKPOINT (>= 1024px) --- */
+@media (min-width: 1024px) {
+  .page-hero-container {
+    /* Increased margin for desktop aesthetics */
+    width: calc(100% - 4rem);
+    margin-top: 6.5rem;
+    /* Immersive height for laptops */
+    height: 85vh;
+    min-height: 720px;
+    
+    max-width: 1600px; 
+  }
+}
+
+/* --- 4. LARGE SCREEN BREAKPOINT (>= 1440px) --- */
+@media (min-width: 1440px) {
+  .page-hero-container {
+    /* Full impact for large monitors */
+    margin-top: 6.5rem; 
+    height: 85vh;
+    min-height: 820px;
+    max-width: 2560px; /* Increased to support 4K layouts better */
+  }
+}
+
+/* --- 5. 4K ULTRA-WIDE BREAKPOINT (>= 2560px) --- */
+@media (min-width: 2560px) {
+  .page-hero-container {
+    width: calc(100% - 6rem);
+    max-width: 3000px; /* Allow wider expansion on 4K */
+    height: 80vh; /* Adjust height slightly for ultra-wide aspect ratios */
+    min-height: 1000px;
+  }
+}
+
+/* --- Media Layer (Background) --- */
+.page-hero-media-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ensure no scale overflow */
+}
+
+.page-hero-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: heroMediaFadeIn 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes heroMediaFadeIn {
+  0% { opacity: 0; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* --- Gradient Overlay --- */
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  pointer-events: none;
+}
+
+/* --- Content Layer --- */
+.page-hero-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 0 1.5rem 2.5rem 1.5rem; /* Increased mobile padding */
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .page-hero-content {
+    padding: 0 3rem 4rem 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-hero-content {
+    padding: 0 5rem 6rem 5rem;
+  }
+}
+
+/* Typography */
+.page-hero-subtitle {
+  display: block;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem; /* Slightly larger mobile text */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #D12027;
+  margin-bottom: 1rem;
+  
+  /* Animation Config */
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: heroTextSlideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+  
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+@media (min-width: 768px) {
+  .page-hero-subtitle {
+    font-size: 0.875rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .page-hero-subtitle {
+    font-size: 1.25rem; /* Scale up for 4K */
+    margin-bottom: 1.5rem;
+  }
+}
+
+.page-hero-title {
+  font-family: var(--font-akira), sans-serif;
+  font-size: 2rem; /* Mobile Base */
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.95;
+  margin: 0;
+  letter-spacing: 0.02em;
+  
+  /* Animation Config */
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: heroTextSlideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both;
+  
+  text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+@media (min-width: 480px) {
+  .page-hero-title {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-hero-title {
+    font-size: 4rem; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-hero-title {
+    font-size: 5.5rem; 
+  }
+}
+
+@media (min-width: 1440px) {
+  .page-hero-title {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .page-hero-title {
+    font-size: 9rem; /* Massive title for 4K */
+    line-height: 0.9;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes heroTextSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

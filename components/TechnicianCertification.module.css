@@ -1,0 +1,432 @@
+
+/* 
+ * Technician Certification Styles
+ * Theme: Matched to BoldStatement (Clean, Containerized, Technical)
+ */
+
+.tc-section {
+  width: 100%;
+  position: relative;
+  background-color: #f7f7f5; /* Crisp white to contrast slightly with BoldStatement's grey */
+  overflow: hidden;
+  padding: 6rem 0;
+  margin: 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .tc-section {
+    padding: 8rem 0;
+    margin: 6rem 0;
+  }
+}
+
+/* Watermark */
+.tc-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 18vw;
+  color: rgba(0, 0, 0, 0.04);
+  z-index: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Container */
+.tc-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Grid Layout */
+.tc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6rem;
+}
+
+/* 
+ * 1024px Layout Fix:
+ * Switched to padding-based spacing to create a proper full-height separator line.
+ * Removed 'gap' to allow border to sit exactly in the middle of content visual spacing.
+ */
+@media (min-width: 1024px) {
+  .tc-grid {
+    grid-template-columns: 0.9fr 1.1fr; /* Balanced split */
+    align-items: stretch; /* Ensure border stretches full height */
+    gap: 0; /* Removing grid gap to handle spacing via padding */
+  }
+}
+
+@media (min-width: 1440px) {
+  .tc-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+}
+
+/* --- Left Column: Visuals --- */
+.tc-visual-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .tc-visual-col {
+    align-items: flex-end; /* Align logo closer to center line */
+    justify-content: center;
+    border-right: 1px solid rgba(18, 18, 18, 0.1); /* Proper separator line */
+    padding-right: 4rem; /* Spacing from separator */
+    position: relative;
+  }
+}
+
+@media (min-width: 1440px) {
+  .tc-visual-col {
+    padding-right: 6rem;
+  }
+}
+
+.tc-logo-wrapper {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 3rem;
+  filter: drop-shadow(0 20px 40px rgba(0, 37, 125, 0.1));
+  will-change: transform, opacity;
+}
+
+@media (min-width: 1024px) {
+  .tc-logo-wrapper {
+    margin-bottom: 0; /* Reset for desktop vertical alignment */
+  }
+}
+
+@media (min-width: 2560px) {
+  .tc-logo-wrapper {
+    max-width: 550px; 
+  }
+}
+
+.tc-logo-svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Floating Badge */
+.tc-floating-stat {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  will-change: transform;
+  
+  /* Positioning relative to visual col on mobile, absolute on desktop */
+}
+
+@media (min-width: 1024px) {
+  .tc-floating-stat {
+    position: absolute;
+    bottom: 10%;
+    right: 2rem; /* Overlapping the separator slightly or close to it */
+    z-index: 10;
+  }
+}
+
+@media (min-width: 2560px) {
+  .tc-floating-stat {
+    padding: 1.5rem 2.5rem;
+    gap: 1.5rem;
+  }
+}
+
+.tc-stat-icon {
+  font-size: 1.5rem;
+  color: #00257d; 
+}
+
+@media (min-width: 2560px) {
+  .tc-stat-icon { font-size: 2.5rem; }
+}
+
+.tc-stat-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.tc-stat-label {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  color: #6b7280;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+}
+
+@media (min-width: 2560px) {
+  .tc-stat-label { font-size: 0.8rem; }
+}
+
+.tc-stat-value {
+  font-family: "Akira Expanded", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  color: #121212;
+}
+
+@media (min-width: 2560px) {
+  .tc-stat-value { font-size: 1.2rem; }
+}
+
+/* --- Right Column: Content --- */
+.tc-content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .tc-content-col {
+    padding-left: 4rem; /* Spacing from separator */
+  }
+}
+
+@media (min-width: 1440px) {
+  .tc-content-col {
+    padding-left: 6rem;
+  }
+}
+
+.tc-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.7rem;
+}
+
+/* Header Group */
+.tc-header-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tc-pre-title {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #D12027; 
+  margin-bottom: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tc-pre-title::before {
+  content: '';
+  width: 2rem;
+  height: 2px;
+  background-color: #D12027;
+}
+
+@media (min-width: 2560px) {
+  .tc-pre-title { font-size: 1.25rem; }
+}
+
+.tc-headline {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.8rem;
+  color: #121212;
+  line-height: 1.1;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+@media (min-width: 480px) {
+  .tc-headline { 
+    font-size: 2.5rem;
+    letter-spacing: 0.15rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .tc-headline { 
+    font-size: 3.5rem; 
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tc-headline { 
+    font-size: 3.25rem; /* Tuned for 1024px */
+  }
+}
+
+@media (min-width: 1440px) {
+  .tc-headline { 
+    font-size: 4.5rem; 
+    letter-spacing: 0.25rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .tc-headline { 
+    font-size: 6.5rem; 
+    letter-spacing: 0.35rem;
+  }
+}
+
+.tc-highlight {
+  color: #00257d; 
+}
+
+/* Description */
+.tc-description {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  max-width: 600px;
+}
+
+@media (min-width: 768px) {
+  .tc-description { font-size: 1.125rem; }
+}
+
+@media (min-width: 1440px) {
+  .tc-description { 
+    font-size: 1.25rem; 
+    max-width: 750px; 
+  }
+}
+
+@media (min-width: 2560px) {
+  .tc-description { 
+    font-size: 1.6rem; 
+    max-width: 1200px; 
+    line-height: 1.6;
+  }
+}
+
+.tc-description strong {
+  color: #121212;
+  font-weight: 600;
+}
+
+/* Specs List (Horizontal/Grid) */
+.tc-specs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  perspective: 1000px; /* Essential for smooth 3D reveals */
+}
+
+@media (min-width: 1440px) {
+  .tc-specs-list { gap: 2rem; }
+}
+
+.tc-spec-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #f7f7f5;
+  border: 1px solid rgba(0,0,0,0.05);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  will-change: transform, opacity; /* Performance optimization */
+  transform-style: preserve-3d;
+}
+
+.tc-spec-card:hover {
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+  border-color: #00257d;
+}
+
+@media (min-width: 2560px) {
+  .tc-spec-card { padding: 1.25rem 2rem; gap: 1.5rem; }
+}
+
+.tc-spec-card i {
+  font-size: 1.2rem;
+  color: #00257d;
+}
+
+@media (min-width: 2560px) {
+  .tc-spec-card i { font-size: 2.25rem; }
+}
+
+.tc-spec-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tc-spec-info h4 {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.07rem;
+  color: #121212;
+  margin: 0 0 2px 0;
+}
+
+@media (min-width: 2560px) {
+  .tc-spec-info h4 { font-size: 1rem; }
+}
+
+.tc-spec-info span {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+@media (min-width: 2560px) {
+  .tc-spec-info span { font-size: 1rem; }
+}
+
+/* Link */
+.tc-cta-row {
+  margin-top: 1rem;
+}
+
+.tc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #D12027;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.tc-link:hover {
+  gap: 1rem;
+  border-bottom-color: #D12027;
+}
+
+@media (min-width: 2560px) {
+  .tc-link { font-size: 1.25rem; }
+}

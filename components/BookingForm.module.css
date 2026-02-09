@@ -1,0 +1,192 @@
+
+/* 
+ * Booking Form Component Styles
+ * Theme: Glassmorphism & High End UX
+ */
+
+.section {
+  width: 100%;
+  padding: 2rem 0;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .section { padding: 4rem 0; }
+}
+
+.container {
+  width: 95%; /* Mobile width */
+  max-width: 1000px; /* Max width for the form container */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 1440px) {
+  .container { max-width: 1200px; }
+}
+
+/* Glass Wrapper */
+.glassWrapper {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  box-shadow: 
+    0 20px 40px -5px rgba(0, 0, 0, 0.1),
+    0 10px 15px -3px rgba(0, 0, 0, 0.05),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+  padding: 1.5rem 0.5rem; /* Tight padding for 320px screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .glassWrapper {
+    padding: 3rem;
+    border-radius: 1.5rem;
+  }
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 0 1rem;
+}
+
+.iconWrapper {
+  width: 3rem;
+  height: 3rem;
+  background-color: #D12027;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(209, 32, 39, 0.3);
+}
+
+.title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 1.5rem; /* Mobile */
+  color: #121212;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.title span {
+  color: #D12027;
+}
+
+@media (min-width: 768px) {
+  .title { font-size: 2.25rem; }
+}
+
+.divider {
+  width: 60px;
+  height: 4px;
+  background-color: #D12027;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Iframe Container */
+.iframeContainer {
+  width: 100%;
+  position: relative;
+  /* Ensure a minimum height before load to prevent collapse */
+  min-height: 600px; 
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  overflow: hidden; /* Clips the iframe rounded corners */
+}
+
+/* Loading State */
+.loaderOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(209, 32, 39, 0.1);
+  border-left-color: #D12027;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Iframe Styling */
+.iframe {
+  width: 100%;
+  max-width: 640px; /* Match standard Google Form width */
+  height: 1702px; /* Default height from embed code */
+  border: none;
+  /* On mobile, let height be tall enough. */
+}
+
+@media (max-width: 480px) {
+  /* Add extra height for mobile text wrapping */
+  .iframe {
+    height: 2000px; 
+  }
+}
+
+/* Footer Note */
+.footerNote {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  width: 100%;
+  text-align: center;
+}
+
+.footerNote p {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}

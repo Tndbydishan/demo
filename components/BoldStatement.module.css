@@ -1,0 +1,196 @@
+
+/* 
+ * Bold Statement Styles
+ * Theme: Light, Bold, Technical
+ */
+
+.bs-section {
+  width: 100%;
+  background-color: #f7f7f5;
+  color: #121212;
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0;
+  display: flex;
+  align-items: center;
+  /* Add margin to separate from other sections */
+  margin: 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .bs-section {
+    padding: 8rem 0;
+    margin: 6rem 0;
+  }
+}
+
+.bs-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.bs-content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .bs-content-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 6rem;
+  }
+}
+
+/* --- Typography --- */
+.bs-headline-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bs-label {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #D12027;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bs-label::before {
+  content: '';
+  width: 2rem;
+  height: 2px;
+  background-color: #D12027;
+}
+
+.bs-headline {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 2.5rem; /* Mobile */
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #121212;
+}
+
+@media (min-width: 480px) {
+  .bs-headline { font-size: 3.5rem; }
+}
+
+@media (min-width: 768px) {
+  .bs-headline { font-size: 4.5rem; }
+}
+
+@media (min-width: 1440px) {
+  .bs-headline { font-size: 5.5rem; }
+}
+
+/* --- Strikethrough Effect --- */
+.bs-strike-wrapper {
+  position: relative;
+  color: #9ca3af; /* Light gray for striked text */
+  display: inline-block;
+  margin-right: 0.3em;
+}
+
+.bs-strike-line {
+  position: absolute;
+  top: 50%; /* Adjusted to exact center */
+  left: -10%;
+  width: 120%; /* Wider strike */
+  height: 6px; /* Thickness of strike */
+  background-color: #D12027;
+  transform: rotate(-6deg) translateY(-50%); /* Slight angle and centering fix */
+  border-radius: 999px;
+  box-shadow: 0 4px 10px rgba(209, 32, 39, 0.3);
+  transform-origin: center;
+}
+
+@media (min-width: 768px) {
+  .bs-strike-line { height: 8px; }
+}
+
+.bs-highlight {
+  color: #121212;
+}
+
+/* --- Description --- */
+.bs-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bs-description {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .bs-description { font-size: 1.125rem; }
+}
+
+/* --- Badges --- */
+.bs-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.bs-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid rgba(18, 18, 18, 0.1);
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.bs-badge:hover {
+  border-color: #D12027;
+  background: rgba(209, 32, 39, 0.05);
+  transform: translateY(-2px);
+}
+
+.bs-badge i {
+  color: #D12027;
+  font-size: 1.25rem;
+}
+
+.bs-badge span {
+  font-family: var(--font-montserrat), sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #121212;
+}
+
+/* --- Background Decoration --- */
+.bs-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 20vw;
+  color: rgba(0, 0, 0, 0.03); /* Subtle dark watermark */
+  z-index: 1;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}

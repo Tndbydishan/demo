@@ -1,0 +1,260 @@
+
+/* 
+ * Quality Assurance Styles
+ * Theme: Clean, White, Technical Precision
+ */
+
+.qa-section {
+  width: 100%;
+  background-color: #ffffff; /* Crisp white to differentiate from grey neighbours */
+  color: #121212;
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+@media (min-width: 768px) {
+  .qa-section {
+    padding: 8rem 0;
+  }
+}
+
+/* Watermark */
+.qa-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 18vw;
+  color: rgba(0, 0, 0, 0.03);
+  z-index: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.qa-container {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Background Abstract Line */
+.qa-bg-line {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(209, 32, 39, 0.1);
+  z-index: 1; /* Sits above watermark but below content */
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .qa-bg-line {
+    display: block;
+  }
+}
+
+/* Main Grid */
+.qa-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .qa-grid {
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 6rem;
+  }
+}
+
+/* --- Left Column: Identity --- */
+.qa-identity-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .qa-identity-col {
+    position: sticky;
+    top: 8rem; /* Sticky scroll effect */
+  }
+}
+
+.qa-label {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.qa-label::after {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background-color: #D12027;
+}
+
+/* Main Visual SVG 1 */
+.qa-main-logo {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  margin-bottom: 2rem;
+  /* Filter for sleek monochrome initial state */
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
+  transition: transform 0.5s ease;
+}
+
+.qa-main-logo:hover {
+  transform: scale(1.02);
+}
+
+.qa-headline {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 2rem;
+  color: #121212;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .qa-headline {
+    font-size: 2.75rem;
+  }
+}
+
+.qa-headline span {
+  color: #D12027;
+}
+
+.qa-description {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  max-width: 450px;
+}
+
+/* --- Right Column: Pillars --- */
+.qa-pillars-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Feature Grid */
+.qa-features-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .qa-features-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.qa-card {
+  background-color: #f7f7f5;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.qa-card:hover {
+  background-color: #ffffff;
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,0.08);
+  border-color: #D12027;
+  transform: translateY(-5px);
+}
+
+.qa-card-icon {
+  font-size: 2rem;
+  color: #D12027;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+}
+
+.qa-card-title {
+  font-family: "Akira Expanded", sans-serif;
+  font-size: 0.9rem;
+  color: #121212;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.qa-card-text {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.85rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Secondary Stamp (SVG 2) */
+.qa-stamp-wrapper {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding-top: 2rem;
+}
+
+.qa-stamp-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  opacity: 0.8;
+}
+
+.qa-stamp-label {
+  font-family: var(--font-montserrat), sans-serif;
+  font-size: 0.75rem;
+  text-align: right;
+  color: #9ca3af;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  max-width: 150px;
+  line-height: 1.4;
+}
+
+.qa-secondary-logo {
+  width: 220px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease;
+}
+
+.qa-secondary-logo:hover {
+  filter: grayscale(0%);
+}
+
+@media (min-width: 768px) {
+  .qa-secondary-logo {
+    width: 280px;
+  }
+}
