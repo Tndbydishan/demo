@@ -1,6 +1,5 @@
 
 import React from 'react';
-import styles from './CertLogo.module.css';
 
 interface CertLogoProps {
   className?: string;
@@ -13,11 +12,11 @@ export const CertLogo: React.FC<CertLogoProps> = ({ className }) => {
       data-name="Layer 1" 
       xmlns="http://www.w3.org/2000/svg" 
       viewBox="0 0 305.99 89.21"
-      className={`${styles['cl-svg']} ${className || ''}`}
+      className={className}
       aria-label="EDU Certified Technicians Logo"
     >
       {/* Group 1: The Blue Box and EDU Text */}
-      <g className={styles['cl-group-box']}>
+      <g className="cl-group-box">
         <rect fill="#00257d" width="89.23" height="89.21"/>
         <text 
           transform="translate(16.7 50.23)" 
@@ -35,7 +34,7 @@ export const CertLogo: React.FC<CertLogoProps> = ({ className }) => {
       </g>
       
       {/* Group 2: The Certified Technicians Text */}
-      <g className={styles['cl-group-text']}>
+      <g className="cl-group-text">
         <text 
           transform="translate(110.92 41.66)"
           style={{

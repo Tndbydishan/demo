@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { NAV_LINKS } from '../data';
 import { NavTheme } from '../types';
-import { Logo } from './Logo';
 import styles from './Navbar.module.css';
 
 interface NavbarProps {
@@ -119,10 +118,6 @@ export default function Navbar({ theme = 'light' }: NavbarProps) {
       ========================================= */}
       {!isDesktop && (
         <>
-           {/* Mobile Logo (Top Left) - Hides when menu opens, overlaps with Fixed Logo from Layout but needed for transition/overlay */}
-           <div className={`${styles['mobile-logo-container']} ${isMobileMenuOpen ? styles['hidden'] : ''}`}>
-             <Logo />
-          </div>
 
           {/* Hamburger Button */}
           <button
@@ -140,13 +135,6 @@ export default function Navbar({ theme = 'light' }: NavbarProps) {
           {/* Full Screen Overlay */}
           <div className={`${styles['nav-mobile-overlay']} ${isMobileMenuOpen ? styles['open'] : ''}`}>
             
-             {/* Internal Overlay Logo */}
-             {isMobileMenuOpen && (
-               <div style={{ position: 'absolute', top: '1.5rem', left: '1.5rem', zIndex: 103 }}>
-                  <Logo />
-               </div>
-             )}
-
              <div className={styles['nav-mobile-content-wrapper']}>
                 
                 {/* Main Menu Layer */}

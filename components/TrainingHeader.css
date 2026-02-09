@@ -339,13 +339,6 @@
   object-fit: cover;
 }
 
-.th-img-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.4) 100%);
-  pointer-events: none;
-}
-
 /* --- COMPACT BADGE --- */
 .th-compact-badge {
   position: absolute;

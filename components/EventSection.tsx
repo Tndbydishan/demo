@@ -45,9 +45,9 @@ const EVENTS_DATA: EventItem[] = [
       </>
     ),
     gallery: [
-      'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=2940&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1532906619279-a79716768393?q=80&w=2938&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=2940&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     ]
   },
   {
@@ -55,7 +55,7 @@ const EVENTS_DATA: EventItem[] = [
     slug: 'hybrid-engine-masterclass',
     title: 'Hybrid Engine Masterclass',
     date: 'APRIL 10, 2025',
-    thumbnail: 'https://images.unsplash.com/photo-1486262715619-72a604e3d4b3?q=80&w=2940&auto=format&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     shortDesc: 'Deep dive into the complexities of modern hybrid powertrains.',
     content: (
       <>
@@ -70,8 +70,8 @@ const EVENTS_DATA: EventItem[] = [
       </>
     ),
     gallery: [
-       'https://images.unsplash.com/photo-1530046339160-711535b94977?q=80&w=2940&auto=format&fit=crop',
-       'https://images.unsplash.com/photo-1504222490245-4815c9e610a8?q=80&w=2940&auto=format&fit=crop'
+       'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+       'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     ]
   },
   {
@@ -79,7 +79,7 @@ const EVENTS_DATA: EventItem[] = [
     slug: 'summer-auto-expo',
     title: 'Summer Auto Expo',
     date: 'JUNE 22, 2025',
-    thumbnail: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2800&auto=format&fit=crop',
+    thumbnail: 'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     shortDesc: 'Showcasing the finest modified cars in the region.',
     content: (
       <>
@@ -88,9 +88,9 @@ const EVENTS_DATA: EventItem[] = [
       </>
     ),
     gallery: [
-      'https://images.unsplash.com/photo-1600706432502-7939e386763d?q=80&w=2787&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1562426503-12e6fd634081?q=80&w=2940&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2940&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
     ]
   }
 ];

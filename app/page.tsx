@@ -4,40 +4,57 @@ import { PageHero } from '../components/PageHero';
 import { PartnerMarquee } from '../components/PartnerMarquee';
 import { ContactInfoSection } from '../components/ContactInfoSection';
 import { BoldStatement } from '../components/BoldStatement';
-import { QualityAssurance } from '../components/QualityAssurance';
 import { TechnicianCertification } from '../components/TechnicianCertification';
+import { QualityAssurance } from '../components/QualityAssurance';
 
 export const metadata = {
-  title: 'Home',
-  description: 'Auto Evolution Workshop - Precision, Performance, Perfection.',
+  title: 'Auto Evolution Workshop',
+  description: 'Industry leading automotive service center.',
 };
 
 const PARTNERS = [
   { 
-    name: 'Motul', 
-    logo: '/resources/images/motul.png',
-    customWidth: '120px'
+    name: '', 
+    logo: '/resources/Certified/Oem.png',
+    customWidth: '150px'
   },
-  { 
-    name: 'Bosch', 
-    logo: '/resources/images/bosch.png',
-    customWidth: '140px'
-  },
-  { 
-    name: 'Brembo', 
-    logo: '/resources/images/brembo.png',
+    { 
+    name: '', 
+    logo: '/resources/Certified/Certified.png',
     customWidth: '130px'
   },
   { 
-    name: 'K&N', 
-    logo: '/resources/images/kn.png',
-    customWidth: '100px'
+    name: '', 
+    logo: '/resources/Certified/quality.png',
+    customWidth: '140px'
   },
   { 
-    name: 'Mobil 1', 
-    logo: '/resources/images/mobil1.png',
-    customWidth: '110px'
+    name: '', 
+    logo: '/resources/Certified/Oem.png',
+    customWidth: '130px'
   },
+  { 
+    name: '', 
+    logo: '/resources/Certified/Certified.png',
+    customWidth: '150px'
+  },
+    { 
+    name: '', 
+    logo: '/resources/Certified/quality.png',
+    customWidth: '140px'
+  },
+  { 
+    name: '', 
+    logo: '/resources/Certified/Oem.png',
+    customWidth: '150px'
+  },
+ 
+    { 
+    name: '', 
+    logo: '/resources/Certified/Certified.png',
+    customWidth: '130px'
+  },
+
 ];
 
 export default function HomePage() {
@@ -47,26 +64,26 @@ export default function HomePage() {
         title={<>AUTO EVOLUTION<br/><span style={{color: '#D12027'}}>WORKSHOP</span></>}
         subtitle="EST. 2018 | PREMIER AUTOMOTIVE CARE"
         mediaType="image"
-        mediaSource="https://images.unsplash.com/photo-1486262715619-72a604e3d4b3?q=80&w=2940&auto=format&fit=crop"
+        mediaSource="https://images.unsplash.com/photo-1653618293287-a66eb0c4271a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
       
       <div className="px-4 lg:px-12 py-12 flex flex-col gap-12 max-w-[1440px] mx-auto">
          <ContactInfoSection />
       </div>
 
-      <BoldStatement />
+            <BoldStatement />
 
-      <QualityAssurance />
+                  <QualityAssurance />
 
-      <TechnicianCertification />
+            <TechnicianCertification />
 
       <PartnerMarquee 
         partners={PARTNERS} 
-        title="Our Trusted Partners" 
+        title="" 
         showUnderline={false}
-        speed={20}
-        gap="2rem"
-        height="80px"
+        speed={35}
+        gap="5rem"
+        height="50px"
         padding="2rem 0"
       />
     </>

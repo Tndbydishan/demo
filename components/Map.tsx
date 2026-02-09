@@ -49,3 +49,4 @@ export const Map: React.FC<MapProps> = ({
     </div>
   );
 };
+

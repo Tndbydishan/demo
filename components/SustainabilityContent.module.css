@@ -337,7 +337,7 @@
 .sus-book-3d {
   width: 100%;
   max-width: 260px; /* Start smaller for mobile */
-  aspect-ratio: 1 / 1.414; /* A4 Ratio */
+  aspect-ratio: 3 / 4; /* A4 Ratio */
   height: auto; /* Let aspect ratio control height */
   
   background: #ffffff;
@@ -366,7 +366,7 @@
 .sus-book-cover {
   position: absolute;
   inset: 0;
-  background: #ffffff;
+  background: #121212;
   overflow: hidden;
   border-radius: 2px 4px 4px 2px;
   display: block;

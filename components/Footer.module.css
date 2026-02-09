@@ -165,16 +165,6 @@
 .footer-socials {
   display: flex;
   gap: 1.5rem;
-  align-items: center;
-}
-
-.footer-follow-text {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-  color: #121212;
-  margin-right: 0.5rem;
 }
 
 .footer-social-icon {

@@ -16,7 +16,7 @@ export default function FAQPage() {
         title="SUPPORT"
         subtitle="FREQUENTLY ASKED QUESTIONS"
         mediaType="image"
-        mediaSource="https://images.unsplash.com/photo-1632823471415-3bd4426569cc?q=80&w=2940&auto=format&fit=crop"
+        mediaSource="https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
       
       <div className="w-full max-w-[1440px] mx-auto pb-12">

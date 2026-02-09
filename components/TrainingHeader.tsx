@@ -12,7 +12,7 @@ interface TrainingHeaderProps {
 }
 
 export const TrainingHeader: React.FC<TrainingHeaderProps> = ({ 
-  imageSrc = "https://images.unsplash.com/photo-1530046339160-711535b94977?q=80&w=2940&auto=format&fit=crop",
+  imageSrc ="https://images.unsplash.com/photo-1761164452369-fadf1228dc21?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   className = ""
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -164,9 +164,6 @@ export const TrainingHeader: React.FC<TrainingHeaderProps> = ({
              <div className="th-line-mask">
                <span className="th-text-reveal th-outline-text">Engineering</span>
              </div>
-             <div className="th-line-mask">
-               <span className="th-text-reveal">Mastery</span>
-             </div>
            </h1>
 
            {/* Description */}
@@ -209,8 +206,8 @@ export const TrainingHeader: React.FC<TrainingHeaderProps> = ({
                <div className="th-radar-dot"></div>
              </div>
              <div className="th-badge-text-group">
-               <span className="th-badge-status-sm">Admissions Open</span>
-               <span className="th-badge-year-sm">BATCH 2026</span>
+               <span className="th-badge-status-sm">Admissions</span>
+               <span className="th-badge-year-sm">Open</span>
              </div>
              <div className="th-badge-arrow">
                <i className="ri-arrow-right-up-line"></i>

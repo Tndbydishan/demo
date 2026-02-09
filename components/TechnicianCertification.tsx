@@ -96,11 +96,11 @@ export const TechnicianCertification: React.FC = () => {
       // --- 3. Continuous "Alive" Animation for Badge ---
       if (badgeRef.current) {
         gsap.to(badgeRef.current, {
-          y: -10,
+          y: 0,
           duration: 3,
           repeat: -1,
           yoyo: true,
-          ease: "sine.inOut",
+          ease: "",
           delay: 1.5
         });
       }

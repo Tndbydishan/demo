@@ -109,7 +109,7 @@
   width: 120%; /* Wider strike */
   height: 6px; /* Thickness of strike */
   background-color: #D12027;
-  transform: rotate(-6deg) translateY(-50%); /* Slight angle and centering fix */
+  transform: rotate(-0.5deg) translateY(-50%); /* Slight angle and centering fix */
   border-radius: 999px;
   box-shadow: 0 4px 10px rgba(209, 32, 39, 0.3);
   transform-origin: center;
@@ -187,7 +187,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Akira Expanded", sans-serif;
-  font-size: 20vw;
+  font-size: 15vw;
   color: rgba(0, 0, 0, 0.03); /* Subtle dark watermark */
   z-index: 1;
   white-space: nowrap;
