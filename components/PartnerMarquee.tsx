@@ -42,26 +42,36 @@ export const PartnerMarquee: React.FC<PartnerMarqueeProps> = ({
   const trackRef = useRef<HTMLDivElement>(null);
 
   // We duplicate the partners list to create the seamless loop effect.
-  // [Set 1] [Set 2 (Clone)]
-  const baseList = [...partners, ...partners]; 
-  const renderList = [...baseList, ...baseList]; // Double again for smoother seamless logic on wide screens
+  // Quadruple the list to ensure the track is long enough for wide screens
+  // before the GSAP loop resets.
+  const renderList = [...partners, ...partners, ...partners, ...partners]; 
 
   const renderPartner = (p: Partner, index: number) => {
+    // Composite key for React list stability
+    const key = `partner-${index}-${p.name.replace(/\s+/g, '-')}`;
+    
     const content = (
       <>
         {p.logo ? (
+          /* 
+             CRITICAL ARCHITECTURE DECISION:
+             Use standard <img> tag for marquees.
+             1. next/image lazy loading breaks inside transform-translated containers.
+             2. decoding="async" prevents main thread blocking during animation.
+             3. loading="eager" forces network request immediately, fixing "pending" state.
+          */
           <img 
             src={p.logo} 
-            alt={`${p.name} Logo`} 
+            alt={`${p.name || 'Partner'} Logo`} 
             className="pm-partner-logo"
-            // Important: prevent dragging to not interfere with scroll events
             draggable={false}
-            // CRITICAL FIX: Animated marquees break lazy loading detection.
-            // We must force eager loading to ensure the browser requests the image immediately.
-            loading="eager"
+            loading="eager" 
+            decoding="async"
             style={{ 
               width: p.customWidth ? p.customWidth : 'auto',
-              maxHeight: '100%' 
+              height: 'auto',
+              maxHeight: '100%',
+              objectFit: 'contain'
             }}
           />
         ) : (
@@ -73,9 +83,6 @@ export const PartnerMarquee: React.FC<PartnerMarqueeProps> = ({
       </>
     );
 
-    const key = `partner-${index}-${p.name}`;
-    
-    // Wrapper style for individual items
     const itemStyle = { height };
 
     if (p.href) {
@@ -108,8 +115,8 @@ export const PartnerMarquee: React.FC<PartnerMarqueeProps> = ({
     if (!track) return;
 
     const ctx = gsap.context(() => {
-      // 1. Setup the Infinite Animation
-      // We animate x from 0 to -50% (because the track contains exactly 2 copies of the base list logic)
+      // Logic: The list is quadrupled. We animate -50% (two full sets) and then loop.
+      // This is smoother than -25% for very long lists and ensures no gap.
       gsap.to(track, { 
         xPercent: -50, 
         duration: speed, 

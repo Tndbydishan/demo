@@ -1,6 +1,6 @@
 
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Navbar from './Navbar';
@@ -17,23 +17,23 @@ export const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
   const pathname = usePathname();
   
   // PRELOADER LOGIC
-  // Initialize to false to match server rendering (prevents hydration mismatch)
+  // We initialize to false to match server HTML (prevent hydration mismatch).
+  // We use useLayoutEffect to switch it to true BEFORE the browser paints.
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    // Only run on client
-    // logic: Show preloader if we are on Home page AND haven't seen it in this session
+  useLayoutEffect(() => {
+    // Only run on home page
     if (pathname === '/') {
       const hasSeen = sessionStorage.getItem('hasSeenPreloader');
       if (!hasSeen) {
         setIsLoading(true);
-        // Lock scroll when preloader is active
         document.body.style.overflow = 'hidden';
       }
     }
   }, [pathname]);
 
   const handlePreloaderComplete = () => {
+    // Fade out sequence
     setIsLoading(false);
     document.body.style.overflow = ''; // Restore scroll
     sessionStorage.setItem('hasSeenPreloader', 'true');
@@ -42,7 +42,7 @@ export const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
   return (
     <div className={styles.container}>
       
-      {/* PRELOADER - Only rendered if isLoading becomes true on client */}
+      {/* PRELOADER - Condition ensures it blocks view if active */}
       {isLoading && (
         <Preloader onComplete={handlePreloaderComplete}>
           <Logo disableLink color="#141414" />
@@ -65,7 +65,8 @@ export const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
       <Navbar />
 
       {/* MAIN CONTENT */}
-      <main className={`${styles.main} ${styles.fadeInPage}`}>
+      {/* Opacity transition allows smooth entry after preloader */}
+      <main className={`${styles.main} ${!isLoading ? styles.fadeInPage : ''}`}>
         {children}
         <Footer />
       </main>

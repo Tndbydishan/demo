@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Image from 'next/image';
 import styles from './PageHero.module.css';
 
 export type MediaType = 'image' | 'video';
@@ -44,18 +45,21 @@ export const PageHero: React.FC<PageHeroProps> = ({
             loop
             muted
             playsInline
-            // Ensure video covers the area without black bars
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
           >
             <source src={mediaSource} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         ) : (
-          <img 
-            src={mediaSource} 
-            alt="Page Header" 
-            className={styles['page-hero-media']} 
-            loading="eager"
+          /* Use next/image for optimized loading with Priority */
+          <Image
+            src={mediaSource}
+            alt="Page Hero Background"
+            fill
+            priority
+            className={styles['page-hero-media']}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+            quality={90}
           />
         )}
       </div>

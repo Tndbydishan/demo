@@ -2,7 +2,7 @@
 /* Custom Font: Akira Expanded */
 @font-face {
   font-family: 'Akira Expanded';
-  src: url('/fonts/Akira.otf') format('opentype');
+  src: url('/fonts/AkiraExpanded-SuperBold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: block; /* Changed from swap to block to prevent animation glitches */

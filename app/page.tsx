@@ -12,46 +12,47 @@ export const metadata = {
   description: 'Industry leading automotive service center.',
 };
 
-// UPDATED: Paths now match the likely folder structure on your disk (Case-Sensitive).
-// Using 'Certified' (Capitalized) and 'Oem.png' (Capitalized).
+// VERCEL DEPLOYMENT NOTE:
+// Ensure these paths match your `public/` folder exactly, including capitalization.
+// Linux file systems are case-sensitive.
 const PARTNERS = [
   { 
-    name: '', 
+    name: 'OEM', 
     logo: '/resources/Certified/Oem.png',
     customWidth: '150px'
   },
   { 
-    name: '', 
+    name: 'Certified', 
     logo: '/resources/Certified/Certified.png',
     customWidth: '130px'
   },
   { 
-    name: '', 
+    name: 'Quality', 
     logo: '/resources/Certified/Quality.png',
     customWidth: '140px'
   },
   { 
-    name: '', 
+    name: 'OEM', 
     logo: '/resources/Certified/Oem.png',
     customWidth: '130px'
   },
   { 
-    name: '', 
+    name: 'Certified', 
     logo: '/resources/Certified/Certified.png',
     customWidth: '150px'
   },
   { 
-    name: '', 
+    name: 'Quality', 
     logo: '/resources/Certified/Quality.png',
     customWidth: '140px'
   },
   { 
-    name: '', 
+    name: 'OEM', 
     logo: '/resources/Certified/Oem.png',
     customWidth: '150px'
   },
   { 
-    name: '', 
+    name: 'Certified', 
     logo: '/resources/Certified/Certified.png',
     customWidth: '130px'
   },
