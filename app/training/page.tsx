@@ -8,75 +8,76 @@ export const metadata = {
   description: 'Industry leading automotive education and certification.',
 };
 
+// UPDATED: Using 'trainning%20partners' to handle the space and spelling in the folder name.
 const ACADEMIC_PARTNERS = [
   { 
     name: 'Bosch', 
-    logo: '/resources/trainning partners/bosch.svg', 
+    logo: '/resources/trainning%20partners/bosch.svg', 
     customWidth: '130px' 
   },
   { 
     name: 'AUTO EVOLUTION', 
-    logo: '/resources/trainning partners/auto-evolution.png', 
+    logo: '/resources/trainning%20partners/auto-evolution.png', 
     customWidth: '190px' 
   },
   { 
     name: 'Institute of Motor Industry', 
-    logo: '/resources/trainning partners/imi-logo-min-original.png', 
+    logo: '/resources/trainning%20partners/imi-logo-min-original.png', 
     customWidth: '170px' 
   },
   { 
     name: 'Texa', 
-    logo: '/resources/trainning partners/logo-TEXA.jpg', 
+    logo: '/resources/trainning%20partners/logo-texa.jpg', 
     customWidth: '150px' 
   },
   { 
     name: 'Texa_edu', 
-    logo: '/resources/trainning partners/texaedu.png', 
+    logo: '/resources/trainning%20partners/texaedu.png', 
     customWidth: '130px' 
   },
   { 
     name: 'ASE', 
-    logo: '/resources/trainning partners/ase-logo.png', 
+    logo: '/resources/trainning%20partners/ase-logo.png', 
     customWidth: '130px' 
   },
   { 
     name: 'ELECTUDE', 
-    logo: '/resources/trainning partners/electude-logo-png-transparent.png', 
+    logo: '/resources/trainning%20partners/electude-logo-png-transparent.png', 
     customWidth: '190px' 
   },
   { 
     name: 'Bosch', 
-    logo: '/resources/trainning partners/bosch.svg', 
+    logo: '/resources/trainning%20partners/bosch.svg', 
     customWidth: '130px' 
   },
   { 
     name: 'AUTO EVOLUTION', 
-    logo: '/resources/trainning partners/auto-evolution.png', 
+    logo: '/resources/trainning%20partners/auto-evolution.png', 
     customWidth: '190px' 
   },
   { 
     name: 'Institute of Motor Industry', 
-    logo: '/resources/trainning partners/imi-logo-min-original.png', 
+    logo: '/resources/trainning%20partners/imi-logo-min-original.png', 
     customWidth: '170px' 
   },
   { 
     name: 'Texa', 
-    logo: '/resources/trainning partners/logo-TEXA.jpg', 
+    logo: '/resources/trainning%20partners/logo-texa.jpg', 
     customWidth: '150px' 
   },
   { 
     name: 'Texa_edu', 
-    logo: '/resources/trainning partners/texaedu.png', 
+    logo: '/resources/trainning%20partners/texaedu.png', 
     customWidth: '130px' 
   },
   { 
     name: 'ASE', 
-    logo: '/resources/trainning partners/ase-logo.png', 
+    logo: '/resources/trainning%20partners/ase-logo.png', 
     customWidth: '130px' 
   },
   { 
     name: 'ELECTUDE', 
-    logo: '/resources/trainning partners/electude-logo-png-transparent.png', 
+    logo: '/resources/trainning%20partners/electude-logo-png-transparent.png', 
     customWidth: '190px' 
   },
 ];

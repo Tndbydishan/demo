@@ -12,49 +12,49 @@ export const metadata = {
   description: 'Industry leading automotive service center.',
 };
 
+// UPDATED: Paths now match the likely folder structure on your disk (Case-Sensitive).
+// Using 'Certified' (Capitalized) and 'Oem.png' (Capitalized).
 const PARTNERS = [
   { 
     name: '', 
-    logo: '/public/resources/Certified/Oem.png',
+    logo: '/resources/Certified/Oem.png',
     customWidth: '150px'
   },
-    { 
+  { 
     name: '', 
-    logo: '/public/resources/Certified/Certified.png',
+    logo: '/resources/Certified/Certified.png',
     customWidth: '130px'
   },
   { 
     name: '', 
-    logo: '/public/resources/Certified/quality.png',
+    logo: '/resources/Certified/Quality.png',
     customWidth: '140px'
   },
   { 
     name: '', 
-    logo: '/public/resources/Certified/Oem.png',
+    logo: '/resources/Certified/Oem.png',
     customWidth: '130px'
   },
   { 
     name: '', 
-    logo: '/public/resources/Certified/Certified.png',
+    logo: '/resources/Certified/Certified.png',
     customWidth: '150px'
   },
-    { 
+  { 
     name: '', 
-    logo: '/public/resources/Certified/quality.png',
+    logo: '/resources/Certified/Quality.png',
     customWidth: '140px'
   },
   { 
     name: '', 
-    logo: '/public/resources/Certified/Oem.png',
+    logo: '/resources/Certified/Oem.png',
     customWidth: '150px'
   },
- 
-    { 
+  { 
     name: '', 
-    logo: '/public/resources/Certified/Certified.png',
+    logo: '/resources/Certified/Certified.png',
     customWidth: '130px'
   },
-
 ];
 
 export default function HomePage() {
@@ -71,11 +71,11 @@ export default function HomePage() {
          <ContactInfoSection />
       </div>
 
-            <BoldStatement />
+      <BoldStatement />
 
-                  <QualityAssurance />
+      <QualityAssurance />
 
-            <TechnicianCertification />
+      <TechnicianCertification />
 
       <PartnerMarquee 
         partners={PARTNERS} 

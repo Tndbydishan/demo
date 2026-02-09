@@ -2,7 +2,7 @@
 import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import { Montserrat } from 'next/font/google';
-import '../app/globals.css';
+import './globals.css';
 import { ClientLayout } from '../components/ClientLayout';
 
 // Configure Montserrat (Secondary Font)
@@ -30,8 +30,9 @@ export const metadata: Metadata = {
       { url: '/resources/favicon.png', sizes: '32x32', type: 'image/png' },
       { url: '/resources/favicon.png', sizes: '16x16', type: 'image/png' },
     ],
+    // Updated to fallback to main favicon if specific apple-touch-icon folder is missing
     apple: [
-      { url: '/resources/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/resources/favicon.png', sizes: '180x180', type: 'image/png' },
     ],
     other: [
       {
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
       },
     ],
   },
-  manifest: '/resources/favicon/site.webmanifest',
+  // manifest: '/resources/favicon/site.webmanifest', // Commented out to prevent 404 if file is missing
   other: {
     'msapplication-TileColor': '#ffc40d',
     'apple-mobile-web-app-title': 'Auto Evolution',
