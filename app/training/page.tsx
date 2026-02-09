@@ -11,7 +11,7 @@ export const metadata = {
 const ACADEMIC_PARTNERS = [
   { 
     name: 'Bosch', 
-    logo: '/resources/trainning partners/bosch.svg', 
+    logo: '/public/resources/trainning partners/bosch.svg', 
     customWidth: '130px' 
   },
   { 
