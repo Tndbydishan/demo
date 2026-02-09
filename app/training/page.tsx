@@ -21,7 +21,7 @@ const ACADEMIC_PARTNERS = [
   },
   { 
     name: 'Institute of Motor Industry', 
-    logo: '/resources/trainning partners/imi-logo-min-original.png', 
+    logo: '/public/resources/trainning partners/imi-logo-min-original.png', 
     customWidth: '170px' 
   },
   { 
