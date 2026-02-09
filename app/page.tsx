@@ -15,43 +15,43 @@ export const metadata = {
 const PARTNERS = [
   { 
     name: '', 
-    logo: '/resources/Certified/Oem.png',
+    logo: '/public/resources/Certified/Oem.png',
     customWidth: '150px'
   },
     { 
     name: '', 
-    logo: '/resources/Certified/Certified.png',
+    logo: '/public/resources/Certified/Certified.png',
     customWidth: '130px'
   },
   { 
     name: '', 
-    logo: '/resources/Certified/quality.png',
+    logo: '/public/resources/Certified/quality.png',
     customWidth: '140px'
   },
   { 
     name: '', 
-    logo: '/resources/Certified/Oem.png',
+    logo: '/public/resources/Certified/Oem.png',
     customWidth: '130px'
   },
   { 
     name: '', 
-    logo: '/resources/Certified/Certified.png',
+    logo: '/public/resources/Certified/Certified.png',
     customWidth: '150px'
   },
     { 
     name: '', 
-    logo: '/resources/Certified/quality.png',
+    logo: '/public/resources/Certified/quality.png',
     customWidth: '140px'
   },
   { 
     name: '', 
-    logo: '/resources/Certified/Oem.png',
+    logo: '/public/resources/Certified/Oem.png',
     customWidth: '150px'
   },
  
     { 
     name: '', 
-    logo: '/resources/Certified/Certified.png',
+    logo: '/public/resources/Certified/Certified.png',
     customWidth: '130px'
   },
 
